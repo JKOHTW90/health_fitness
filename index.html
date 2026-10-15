@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0f1115">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Coach">
+  <title>Coach — Training & Nutrition</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-title" id="topbarTitle">Today</div>
+    <div class="topbar-sub" id="topbarSub"></div>
+  </header>
+
+  <main id="view"></main>
+
+  <div id="restBar" class="rest-bar hidden">
+    <span>Rest</span>
+    <strong id="restTime">0:00</strong>
+    <button data-act="rest-add">+30s</button>
+    <button data-act="rest-stop">Skip</button>
+  </div>
+
+  <nav class="tabbar">
+    <button data-tab="today" class="active"><span class="ti">🏠</span>Today</button>
+    <button data-tab="train"><span class="ti">🏋️</span>Train</button>
+    <button data-tab="food"><span class="ti">🍜</span>Food</button>
+    <button data-tab="progress"><span class="ti">📈</span>Progress</button>
+    <button data-tab="plan"><span class="ti">📋</span>Plan</button>
+  </nav>
+
+  <div id="sheet" class="sheet hidden">
+    <div class="sheet-backdrop" data-act="sheet-close"></div>
+    <div class="sheet-panel" id="sheetPanel"></div>
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
